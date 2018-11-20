@@ -1,3 +1,7 @@
 .pagination ul>li>a:hover, .pagination ul>li>a:focus, .pagination ul>.active>a, .pagination ul>.active>span {
     cursor: pointer;
 }
+.garbage {
+    text-align: center;
+    cursor: pointer;
+}

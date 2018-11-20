@@ -15,6 +15,17 @@ modulo.controller('ListController', function ($scope) {
         var end = begin + $scope.itemsPerPage;
         $scope.filteredItems = itemsDetails.slice(begin, end);
     });
+    $scope.excluir = function(item) {
+        var i = 0;
+        for(i ; i < itemsDetails.length ; i++) {
+            if(itemsDetails[i].itemCode == item.itemCode) {
+                itemsDetails.splice(i, 1);
+            }
+        }
+        var begin = (($scope.curPage - 1) * $scope.itemsPerPage);
+        var end = begin + $scope.itemsPerPage;
+        $scope.filteredItems = itemsDetails.slice(begin, end);
+    };
 });
 
 var itemsDetails = [

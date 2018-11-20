@@ -4,6 +4,7 @@
 <head>
     <link rel="stylesheet" href="css/bootstrap-combined.min.css">
     <link rel="stylesheet" href="css/estiloPersonalizado.css">
+    <link rel="stylesheet" href="css/fontawesome/fontawesome-all.min.css">
 
     <script src="js/angular.min.js"></script>
     <script src="js/ui-bootstrap-tpls-0.3.0.min.js"></script>
@@ -25,6 +26,7 @@
                 <th>RESTRICT STOCK</th>
                 <th>THRESHOLD</th>
                 <th>ACTIVE</th>
+                <th>EXCLUDE</th>
             </tr>
         </thead>
         <tr ng-repeat="item in filteredItems">
@@ -37,6 +39,7 @@
             <td> {{item.restrictStock}} </td>
             <td> {{item.threshold}} </td>
             <td> {{item.active}} </td>
+            <td class="garbage" ng-click="excluir(item)"><i class="fas fa-trash-alt"></i></td>
         </tr>
     </table>
     <div data-pagination="" data-num-pages="numOfPages()" data-current-page="curPage" data-max-size="maxSize"
